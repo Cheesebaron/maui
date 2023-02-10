@@ -489,7 +489,7 @@ namespace Microsoft.Maui.DeviceTests
 				Assert.True(await AssertionExtensions.Wait(() => shellTitleView.Handler != null && shellTitleView.ToPlatform() == GetTitleView(handler)));
 			});
 		}
-		
+
 		[Fact(DisplayName = "TitleView Set On Shell Works After Navigation")]
 		public async Task TitleViewSetOnShellWorksAfterNavigation()
 		{
