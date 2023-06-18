@@ -357,6 +357,25 @@ namespace Microsoft.Maui.ApplicationModel
 				new (string, bool)[] { (Manifest.Permission.RecordAudio, true) };
 		}
 
+		public partial class NearbyWifiDevices : BasePlatformPermission
+		{
+			public override (string androidPermission, bool isRuntime)[] RequiredPermissions
+			{
+				get
+				{
+					var permissions = new List<(string, bool)>();
+					
+					if (OperatingSystem.IsAndroidVersionAtLeast(33) && 
+					    IsDeclaredInManifest(Manifest.Permission.NearbyWifiDevices))
+					{
+						permissions.Add((Manifest.Permission.NearbyWifiDevices, true));
+					}
+
+					return permissions.ToArray();
+				}
+			}
+		}
+
 		public partial class NetworkState : BasePlatformPermission
 		{
 			public override (string androidPermission, bool isRuntime)[] RequiredPermissions
@@ -486,5 +505,6 @@ namespace Microsoft.Maui.ApplicationModel
 			public override (string androidPermission, bool isRuntime)[] RequiredPermissions =>
 				new (string, bool)[] { (Manifest.Permission.Vibrate, false) };
 		}
+		
 	}
 }

@@ -174,6 +174,10 @@ namespace Microsoft.Maui.ApplicationModel
 		public partial class Microphone : BasePlatformPermission
 		{
 		}
+		
+		public partial class NearbyWifiDevices : BasePlatformPermission
+		{
+		}
 
 		public partial class NetworkState : BasePlatformPermission
 		{
