@@ -22,6 +22,7 @@ namespace Samples.ViewModel
 				new PermissionItem("Maps", new Permissions.Maps()),
 				new PermissionItem("Media Library", new Permissions.Media()),
 				new PermissionItem("Microphone", new Permissions.Microphone()),
+				new PermissionItem("Nearby WiFi Devices", new Permissions.NearbyWifiDevices()),
 				new PermissionItem("Network State", new Permissions.NetworkState()),
 				new PermissionItem("Phone", new Permissions.Phone()),
 				new PermissionItem("Photos", new Permissions.Photos()),
